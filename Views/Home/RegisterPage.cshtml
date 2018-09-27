@@ -1,0 +1,90 @@
+@using FruitShare.Models
+@model FruitShare.Models.UserViewModel
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">FruitShare</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container logReg img-fluid" id="logRegBG">
+    
+    <h1>Welcome to FruitShare</h1>
+    <div asp-validation-summary="All"></div>
+    @if( TempData["error"] != null )
+    {
+        <p>@TempData["error"]</p>
+    }
+
+    <div id="Login">
+        @Html.Partial( "LoginPage" )
+    </div>
+
+    
+    <div id="Register">
+        <h2>Register</h2>
+        <br>
+
+        <div class="form-group">
+            <form asp-controller="Home" asp-action="RegisterForm" method="Post">
+                
+                <div class="form-group col-md-12">
+
+                    <div class="form-group row" id="registerFirstAndLastNameFields">
+                        <div class="form-group col-md-6">
+                            <input class="form-control" asp-for="FirstName"/>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <input class="form-control" asp-for="LastName"/>
+                        </div>
+                    </div>
+                    
+                    <input class="form-control" asp-for="UserName"/>
+                    <br>
+
+                    <div class="form-group row" id="registerCityStateFields">
+                        <div class="form-group col-md-6">
+                            <input class="form-control" asp-for="City"/>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <input class="form-control" asp-for="State"/>
+                        </div>
+                    </div>
+
+                    <input class="form-control" asp-for="Email"/>
+                    <br>
+
+                    <input class="form-control" asp-for="Password"/>
+                    <br>
+
+                    <input class="form-control" asp-for="PasswordConfirmation"/>
+                    <br>
+
+                </div>
+
+                <div class="text-right">
+                    <button type="submit" class="btn btn-info" id="registerUserBtn">Sign Up Now!</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    
+<p class="copyright" id="logRegCopyright">&copy; 2018 - FruitShare</p>
+    
+</div>

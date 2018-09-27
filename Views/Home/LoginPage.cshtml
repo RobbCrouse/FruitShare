@@ -1,0 +1,24 @@
+@model FruitShare.Models.UserLogViewModel
+
+<div id="Login">
+    <h2>Login</h2>
+    <br>
+    <div class="form-group">
+        <form asp-controller="Home" asp-action="LoginForm" method="Post">
+
+            <div class="form-group col-md-12" id="loginEmailAndPassFields">
+                <input class="form-control" id="loginEmail" asp-for="Email"/>
+                <br>
+
+                <input class="form-control" id="loginPassword" asp-for="Password"/>
+                <br>
+
+                <div class="text-right">
+                    <button type="submit" class="btn btn-info" id="loginUserBtn">Login</button>
+                </div>
+
+                <h4>@ViewBag.Login</h4>
+            </div>
+        </form>
+    </div>
+</div>

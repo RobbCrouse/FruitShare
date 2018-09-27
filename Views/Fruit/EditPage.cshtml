@@ -1,0 +1,58 @@
+@model FruitShare.Models.Fruit
+<div asp-validation-summary="All"></div>
+@if( TempData["error"] != null )
+{
+    <p>@TempData["error"]</p>
+}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Fruit" asp-action="Dashboard" class="navbar-brand">FruitShare</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a class="align-right" asp-area="" asp-controller="Fruit" asp-action="AddNewFruitPage">Add a Fruit</a></li>
+                <li><a class="align-right" asp-area="" asp-controller="Fruit" asp-action="MySharedFruit">Fruit I'm Sharing</a></li>
+                <li><a class="align-right" asp-area="" asp-controller="Fruit" asp-action="MyClaimedFruit">Fruit I'm Claiming</a></li>
+                <li><a class="align-right" asp-area="" asp-controller="Home" asp-action="LogOut">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container EditFruit img-fluid" id="EditFruitBG">
+
+    <h2>Edit This Fruit and Its Notes:</h2>
+
+    <form asp-controller="Fruit" asp-action="EditFruitForm" asp-route-id="@Model.FruitId" method="Post">
+
+        <div class="form-group col-md-12" id="editFruitFormFields">
+
+            <div class="form-group col-md-10">
+                <input class="form-control" asp-for="FruitName"/><br>
+            </div>
+
+            <div class="form-group col-md-10">
+                <input class="form-control" asp-for="FruitType"/><br>
+            </div>
+
+            <div class="form-group col-md-10">
+                <textarea class="form-control" asp-for="FruitNotes"></textarea><br>
+            </div>
+            
+            <div class="form-group col-md-10 text-right">
+                <button type="submit" class="btn btn-info" id="editFruitBtn">Edit Fruit</button>
+            </div>
+
+        </div>
+    </form>
+
+</img>

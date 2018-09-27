@@ -1,0 +1,103 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">FruitShare</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a class="align-right" asp-area="" asp-controller="Home" asp-action="RegisterNow">Login</a></li>
+                <li><a class="align-right" asp-area="" asp-controller="Home" asp-action="RegisterNow">Join Now</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div id="myCarousel" id="top" class="carousel slide" data-ride="carousel" data-interval="4500">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/images/banner_plums.jpg" alt="Plums" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h1>FruitShare</h1>
+                <h2>is the easiest place to find neighbors to share fruit with!</h2>
+                
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/banner_apples.jpg" alt="Apples" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Locally grown, Organic Produce</h3>
+                <h2>Crisp, Juicy Apples!</h2>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/banner_cherries.jpg" alt="Cherries" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Tree Ripened and Hand-Picked, by your Neighbors and You</h3>
+                <h2>Sweet and Tart Cherries!</h2>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/banner_lemonLime.jpg" alt="Lemons and Limes" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Connect with Neighbors who Crave your excess or unwanted Produce</h3>
+                <h2>Lip Puckering Lemons and Limes!</h2>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/banner_raspberries.jpg" alt="Raspberries" class="img-responsive"/>
+            <div class="carousel-caption" role="option">
+                <h3>Pick your Own Produce at the Peak of Ripeness</h3>
+                <h2>Raspberries!</h2>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="container marketing" id="indexText">
+    <div class="row featurette">
+        <h3 class="featurette-heading">
+            FruitShare is all about bringing local communities together.  People who love fruit and the people who grow it.
+        </h3>
+        <p class="lead">
+            On the one hand, we have families with fruit trees.  Maybe those trees came with their property, maybe they planted too many, or maybe after a number of years they've decided
+            they just couldn't eat another peach.  Fruit left on the trees is then picked over by deer, birds, etc., and then finally falls from the tree, goes to rot, and attracts bugs and
+            rodents.
+
+            Rather than allow this terrible waste and mess to occur in your yard, wouldn't you rather have your fruit loving neighbors stop by and help harvest this delicious fruit?  Once
+            you sign up with FruitShare, your neighbors will be able to sign up for each fruit you've entered.  When the fruit is ready to pick, you simply send out an email letting those
+            neighbors know when and where to meet.
+        </p>
+        <p class="lead">
+            On the other hand, we have families that simply love locally-grown, hand-picked produce.  Sign up with FruitShare, wait for your friendly, neighborhood fruit-grower to email,
+            then show up and help with the harvest.  You leave with a portion of your neighbor's nutritious and delicious fruit, and hopefully a new friend in your community!
+        </p>
+    </div>
+</div>
+
+<p class="copyright">&copy; 2018 - FruitShare</p>

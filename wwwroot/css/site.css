@@ -1,0 +1,317 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+#logRegBG{
+    background-size: cover;
+    width: 100%;
+    background-image: url('/images/peachPlums.jpg');
+    min-height: 700px;
+    padding: 25px;
+}
+
+#Register{
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 15%;
+    
+}
+
+#Register h2, h1{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+
+}
+
+#registerFirstAndLastNameFields{
+    margin-bottom: 6px;
+}
+
+#registerCityStateFields{
+    margin-bottom: 6px;
+}
+
+#registerUserBtn{
+    margin-right: 3%;
+    box-shadow: black 0.1em 0.1em 0.1em;
+    background: linear-gradient(#ffd297, #f15848);
+    border: black;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#loginUserBtn{
+    box-shadow: black 0.1em 0.1em 0.1em;
+    background: linear-gradient(#ffd297, #f15848);
+    border: black;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#Login{
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 2%;
+}
+
+#Login h2{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#loginEmailAndPassFields{
+    margin-left: 8%;
+}
+
+#EditFruitBG{
+    background-size: cover;
+    width: 100%;
+    background-image: url('/images/grapes.jpg');
+    min-height: 567px;
+    margin-top: -10px;
+    padding: 50px;
+    padding-left: 50px;
+    
+}
+
+#EditFruitBG h2{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+    margin-bottom: 8%;
+}
+
+#EditFruitBG textarea{
+    height: 100px;
+}
+
+#editFruitBtn{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    box-shadow: black 0.1em 0.1em 0.1em;
+    background: linear-gradient(#c5ad63, #5b2c38);
+    border: black;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#editFruitFormFields{
+    padding-left: 95px;
+}
+
+#AddFruitBG{
+    background-size: cover;
+    width: 100%;
+    background-image: url('/images/apples.jpg');
+    min-height: 567px;
+    margin-top: -10px;
+    padding: 50px;
+    padding-left: 50px;
+    
+}
+
+#AddFruitBG h2{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+    margin-bottom: 8%;
+}
+
+#AddFruitBG textarea{
+    height: 100px;
+}
+
+#addFruitBtn{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    box-shadow: black 0.1em 0.1em 0.1em;
+    background: linear-gradient(#fff341, #b70100);
+    border: black;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#addFruitFormFields{
+    margin-left: 50px;
+}
+
+#UserShareBG{
+    background-size: cover;
+    width: 100%;
+    background-image: url('/images/blueberries2.jpg');
+    min-height: 567px;
+    margin-top: -10px;
+    padding: 50px;
+    padding-left: 50px;
+    
+}
+
+#UserShareBG h1{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+    margin-bottom: 5%;
+}
+
+#theFruitImSharing{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#theFruitImSharing p{
+    margin-top: 23px;
+    padding-left: 15px;
+}
+
+.userShareBtns{
+    margin-top: 27px;
+    margin-bottom: 2%;
+    box-shadow: black 0.1em 0.1em 0.1em;
+    background: linear-gradient(#d4e3f9, #1e263b);
+    border: black;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#UserClaimBG{
+    background-size: cover;
+    width: 100%;
+    background-image: url('/images/strawberries.jpg');
+    min-height: 567px;
+    margin-top: -10px;
+    padding: 50px;
+    padding-left: 50px;
+}
+
+#UserClaimBG h1{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+    margin-bottom: 5%;
+}
+
+#theFruitImClaiming{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#theFruitImClaiming p{
+    margin-top: 23px;
+    padding-left: 15px;
+}
+
+#userClaimLeaveBtn{
+    margin-top: 27px;
+    margin-bottom: 2%;
+    box-shadow: black 0.1em 0.1em 0.1em;
+    background: linear-gradient(#d01032, #880629);
+    border: black;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#SuccessBG{
+    background-size: cover;
+    width: 100%;
+    background-image: url('/images/greenApples.jpg');
+    min-height: 967px;
+    margin-top: -10px;
+    padding: 50px;
+    padding-left: 50px;
+    
+}
+
+#SuccessBG h2, h4, p{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#SuccessBG h1{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+    margin-bottom: 2%;
+}
+
+.successBtns{
+    margin-top: 27px;
+    margin-bottom: 2%;
+    box-shadow: black 0.1em 0.1em 0.1em;
+    background: linear-gradient(#cacf7d, #588600);
+    border: black;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#successAddFruitBtn{
+    margin-right: 15px;
+}
+
+.fruitDetailBG{
+    background-size: cover;
+    width: 100%;
+    background-image: url('/images/berries.jpg');
+    min-height: 967px;
+    margin-top: -10px;
+    padding: 50px;
+    padding-left: 50px;
+
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+.fruitDetailBG h2{
+    padding-top: 35px;
+    padding-bottom: 50px;
+}
+
+#emailBtn{
+    margin-left: 25px;
+    box-shadow: black 0.1em 0.1em 0.1em;
+    background: linear-gradient(#fdf08a, #ff814a);
+    border: black;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#fruitDetailLoversEmails{
+    margin-left: 100px;
+    padding-bottom: 25px;
+}
+
+.copyright{
+    margin-top: 25px;
+    margin-bottom: -15px;
+    position: relative;
+
+    color: black;
+    text-shadow: white 0.1em 0.1em 0.1em;
+}
+
+#logRegCopyright{
+    margin-top: 75px;
+}
+
+#indexText p{
+    color: black;
+    text-shadow: none;
+}

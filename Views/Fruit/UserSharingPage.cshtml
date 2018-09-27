@@ -1,0 +1,66 @@
+@model List<FruitShare.Models.Fruit>
+
+
+<div asp-validation-summary="All"></div>
+@if( TempData["error"] != null )
+{
+    <p>@TempData["error"]</p>
+}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Fruit" asp-action="Dashboard" class="navbar-brand">FruitShare</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a class="align-right" asp-area="" asp-controller="Fruit" asp-action="AddNewFruitPage">Add a Fruit</a></li>
+                <li><a class="align-right" asp-area="" asp-controller="Fruit" asp-action="MySharedFruit">Fruit I'm Sharing</a></li>
+                <li><a class="align-right" asp-area="" asp-controller="Fruit" asp-action="MyClaimedFruit">Fruit I'm Claiming</a></li>
+                <li><a class="align-right" asp-area="" asp-controller="Home" asp-action="LogOut">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container SharingFruit img-fluid" id="UserShareBG">
+    
+    <h1>Here's All the Fruit You're Sharing, @ViewBag.RetrievedUser.FirstName:  </h1>
+
+    <div class="table-responsive col-lg-12" id="theFruitImSharing">
+        <table class="table">
+            <tbody>
+                @foreach( var rev in Model )
+                {
+                    <tr>
+                        <td><h3>@rev.FruitType @rev.FruitName</h3></td>
+                        
+                        <td>
+                            <form asp-controller="Fruit" asp-action="ShowDetails" asp-route-id="@rev.FruitId" method="Post">
+                                <button type="submit" class="btn btn-info userShareBtns" id="userShareDetailBtn">Details</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form asp-controller="Fruit" asp-action="EditFruitForm" asp-route-id="@rev.FruitId" method="Post">
+                                <button type="submit" class="btn btn-info userShareBtns" id="userShareEditBtn">Edit</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form asp-controller="Fruit" asp-action="DeleteFruitForm" asp-route-id="@rev.FruitId" method="Post">
+                                <button type="submit" class="btn btn-info userShareBtns" id="userShareDeleteBtn">Delete</button>
+                            </form>
+                        </td>
+                        <td><p>@rev.FruitNotes</p></td>
+                    </tr>
+                    
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
