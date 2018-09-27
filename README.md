@@ -27,8 +27,9 @@ New Users are able to Register, while existing Users are able to Login.  All fie
 ### Dashboard
 Users are personally welcomed and presented with a list of available fruit.  Users are shown conditional options for each fruit:
 
-      - If the fruit was added by another user, you have the option to claim it, which puts your email on the fruit owner's Detail list,
-          or change your mind, which removes a previously claimed fruit from your list and your email from the owner's Detail list. 
+      - If the fruit was added by another user, you have the option to claim it, which puts your email on the 
+          fruit owner's Detail list, or change your mind, which removes a previously claimed fruit from your 
+          list and your email from the owner's Detail list. 
           
       - If the fruit was added by the user, they have the option to Delete it, Edit it, or view its Details.  
     
